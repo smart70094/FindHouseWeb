@@ -1,0 +1,1 @@
+{"price_ceil":"1000000","price_floor":"3000","type":"套房","city":"花蓮縣","district":"花蓮市"}

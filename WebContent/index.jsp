@@ -75,13 +75,20 @@
 				<table class="table table-bordered" style="width: 100%">
 					<c:forEach var="element" items="${data}">
 						<tr>
-							<td><img src=${element.get("imgLink")} style="width: 100%"></td>
+							<td><img src=${element.get("picture_address")} style="width: 100%"></td>
 							<td>
 								<ul>
-									<li>${element.get("title")}</li>
+									<li>${element.get("house_id")}</li>
+									<li>${element.get("name")}</li>
+									<li>${element.get("address")}</li>
 									<li>${element.get("type")}</li>
-									<li>${element.get("fullfloor")}</li>
+									<li>${element.get("floor_info")}</li>
 									<li>${element.get("price")}</li>
+									<li>${element.get("area")}</li>
+									<li>${element.get("house_holder")}</li>
+									<li>${element.get("living")}</li>
+									<li>${element.get("device")}</li>
+									<li>${element.get("browsenum")}</li>
 								</ul>
 							</td>
 						</tr>

@@ -7,5 +7,5 @@ import java.util.Map;
 import com.pyhon.SpiderModel.FindHouseTemplate;
 
 public interface FindHouseStrategy {
-	public abstract ArrayList<Map<String,String>> exec(FindHouseTemplate spider) throws Exception;
+	public abstract ArrayList<Map<String,String>> exec(FindHouseTemplate spider);
 }

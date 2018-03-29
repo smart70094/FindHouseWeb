@@ -13,10 +13,15 @@ public class Main {
 	//only test use in this class
 	public static void main(String[] args) throws Exception {
 		
-		FindHouseStrategy strategy=new _591Strategy();
-		FindHouseTemplate spider=new _591HouseTemplateImpl();
-		ArrayList<Map<String,String>> data;
-		data=strategy.exec(spider);
+		try {
+			FindHouseStrategy strategy=new _591Strategy();
+			FindHouseTemplate spider=new _591HouseTemplateImpl();
+			ArrayList<Map<String,String>> data;
+			data=strategy.exec(spider);
+			System.out.println(data.toString());
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
 		

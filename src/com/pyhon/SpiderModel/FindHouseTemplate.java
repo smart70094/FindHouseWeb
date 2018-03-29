@@ -23,8 +23,8 @@ public abstract class FindHouseTemplate {
 			setFilePath();
 			setMethod();
 			setParams();
-			writeParams();
-			connect();
+			//writeParams();
+			connectSiderWithPython();
 			run();
 		} catch (IOException e) {
 			System.out.println("Python Problem:"+e.toString());
@@ -33,10 +33,12 @@ public abstract class FindHouseTemplate {
 	}
 	protected abstract void setFilePath();
 	
+	//設定Python裡面執行的方法
 	private void setMethod() {
 		method="findHouse";
 	}
 	
+	//設定參數給Python
 	private void setParams() {
 		String city="花蓮縣";
 		String district="花蓮市";
@@ -51,7 +53,7 @@ public abstract class FindHouseTemplate {
 		paramsMap.put("type",type);
 	}
 	
-	
+	//測試用_將條件寫到txt
 	private void writeParams() throws IOException {
 		//convert map to json
 		JSONObject jsonObj = new JSONObject(paramsMap);
@@ -62,8 +64,9 @@ public abstract class FindHouseTemplate {
 		fw.write(jsonResult);
 		fw.close();
 	}
+	
 	//連接python
-	private void connect() throws IOException {
+	private void connectSiderWithPython() throws IOException {
         InputStream is = new FileInputStream(filePath); 
         //載入python第三方資源
         interpreter.exec("import sys");
